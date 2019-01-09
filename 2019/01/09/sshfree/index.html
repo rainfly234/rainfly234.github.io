@@ -5,9 +5,15 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="RTMPublisher, Rainfly">
-    <meta name="description" content="介绍一款RTMP 推流工具运行环境支持Linux\Windows, 支持录屏\录制摄像头内容RTMP 推送到远端服务器那就是: OBS(Open Broadcast Software)
-">
+    <meta name="keywords" content="两步实现SSH免密登录远程服务器, Rainfly">
+    <meta name="description" content="
+生成公钥注意更改Email地址  
+1ssh-keygen -t rsa -b 4096 -C &amp;quot;example@gmail.com&amp;quot;
+
+上传公钥到远程服务器
+
+
+1ssh-copy-id -p 23 -i ~/.ss">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>RTMPublisher | Rainfly</title>
+    <title>两步实现SSH免密登录远程服务器 | Rainfly</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -271,13 +277,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        RTMPublisher
+                        两步实现SSH免密登录远程服务器
                     </div>
                 </div>
             </div>
@@ -297,8 +303,8 @@
             
             <div class="article-tag">
                 
-                <a href="/tags/RTMP-H264/" target="_blank">
-                    <span class="chip bg-color">RTMP H264</span>
+                <a href="/tags/SSH/" target="_blank">
+                    <span class="chip bg-color">SSH</span>
                 </a>
                 
             </div>
@@ -329,7 +335,18 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="介绍一款RTMP-推流工具"><a href="#介绍一款RTMP-推流工具" class="headerlink" title="介绍一款RTMP 推流工具"></a>介绍一款RTMP 推流工具</h2><p>运行环境支持Linux\Windows, 支持录屏\录制摄像头内容RTMP 推送到远端服务器<br>那就是: <a href="https://obsproject.com/" target="_blank" rel="noopener">OBS(Open Broadcast Software)</a></p>
+                <ol>
+<li><p>生成公钥<br>注意更改Email地址  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &quot;example@gmail.com&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上传公钥到远程服务器</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id -p 23 -i ~/.ssh/id_rsa.pub root@192.168.1.8</span><br></pre></td></tr></table></figure>
+<p>-p 为远程服务器开启SSH服务的端口号<br><a href="mailto:root@192.168.1.8" target="_blank" rel="noopener">root@192.168.1.8</a> 是远程服务器网络地址和登录用户名</p>
+<ol start="3">
+<li>可以享受面密登录了,注意用户名要和第二步的一致</li>
+</ol>
 
             </div>
             <hr>
@@ -468,7 +485,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://rainfly234.github.io" class="b-link-green">Rainfly</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/01/09/RTMPublisher/" class="b-link-green">RTMPublisher</a>
+                    <a href="/2019/01/09/sshfree/" class="b-link-green">两步实现SSH免密登录远程服务器</a>
                 </p>
             </div>
         </div>
@@ -489,9 +506,9 @@
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://rainfly234.github.io/2019/01/09/RTMPublisher/';
-        this.page.identifier = '/2019/01/09/RTMPublisher/';
-        this.page.title = 'RTMPublisher';
+        this.page.url = 'http://rainfly234.github.io/2019/01/09/sshfree/';
+        this.page.identifier = '/2019/01/09/sshfree/';
+        this.page.title = '两步实现SSH免密登录远程服务器';
     };
     let disqus_shortname = '';
 
@@ -515,7 +532,7 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2019/01/09/sshfree/">
                     <div class="card-image">
@@ -536,9 +553,9 @@
 
 1ssh-copy-id -p 23 -i ~/.ss</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -551,6 +568,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -567,19 +585,18 @@
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2019/01/09/wuye/">
+                <a href="/2019/01/09/RTMPublisher/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="官房地产上帝叫你解决问题">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="RTMPublisher">
                         
-                        <span class="card-title">官房地产上帝叫你解决问题</span>
+                        <span class="card-title">RTMPublisher</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">来源： 众和康园全体业主     共建和谐社区  
-  在2019新年到来之际，首先预祝康园全体业主，身体健康 阖家欢乐！
-一问官房地产众和康园一期，2014年交房，业主们平均每户交了2万多的维修基金和契税，马上进入2019年，交房四年多了</div>
+                    <div class="summary">介绍一款RTMP 推流工具运行环境支持Linux\Windows, 支持录屏\录制摄像头内容RTMP 推送到远端服务器那就是: OBS(Open Broadcast Software)
+</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-09
@@ -588,8 +605,8 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/物业/" class="post-category" target="_blank">
-                                    物业
+                            <a href="/categories/技术/" class="post-category" target="_blank">
+                                    技术
                                 </a>
                             
                             
@@ -599,8 +616,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/官房/" target="_blank">
-                        <span class="chip bg-color">官房</span>
+                    <a href="/tags/RTMP-H264/" target="_blank">
+                        <span class="chip bg-color">RTMP H264</span>
                     </a>
                     
                 </div>
