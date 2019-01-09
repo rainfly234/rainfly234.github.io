@@ -10,7 +10,10 @@
 
 Grep 查找法
 
-123grep . filename &amp;gt; destfile.是任意字符, &amp;gt; 是重定向, 意思是查找任意非空字符,重定向到destfile 文件
+grep . filename &amp;gt; destfile
+
+.是任意字符, &amp;gt; 是重定向, 意思是查找任意非空字符,重定向到destfile 文件
+
 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +34,7 @@ Grep 查找法
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 </head>
 
@@ -337,16 +340,21 @@ Grep 查找法
 <ol>
 <li>Grep 查找法</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grep . filename &gt; destfile</span><br><span class="line"></span><br><span class="line">.是任意字符, &gt; 是重定向, 意思是查找任意非空字符,重定向到destfile 文件</span><br></pre></td></tr></table></figure>
-<ol start="2">
+<pre><code>grep . filename &gt; destfile
+
+.是任意字符, &gt; 是重定向, 意思是查找任意非空字符,重定向到destfile 文件
+</code></pre><ol start="2">
 <li>Sed 命令删除</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed  &apos;/^$/d&apos; data.txt</span><br><span class="line">sed &apos;/^\s*$/d&apos; data.txt   #这样由空格、tab组成的空行也会删掉。</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>VIM 删除<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:g/^\s*$/d</span><br><span class="line">g 代表全部匹配执行</span><br><span class="line">^开头</span><br><span class="line">\s空格 或者tab</span><br><span class="line">* 匹配0次或无限次</span><br><span class="line">$ 结尾</span><br><span class="line">d 删除</span><br></pre></td></tr></table></figure>
-</li>
+<pre><code>sed  &#39;/^$/d&#39; data.txt
+sed &#39;/^\s*$/d&#39; data.txt   #这样由空格、tab组成的空行也会删掉。
+
+</code></pre><ol start="3">
+<li>VIM 删除<br><code>`</code><br>:g/^\s*$/d<br>g 代表全部匹配执行<br>^开头<br>\s空格 或者tab</li>
 </ol>
-<p>记住一个就行了, 看你喜欢<br>欢迎下载试用 <a href="https://a.app.qq.com/o/simple.jsp?pkgname=cn.nfwx.tv" target="_blank" rel="noopener">南方无线电视</a></p>
+<ul>
+<li>匹配0次或无限次<br>$ 结尾<br>d 删除<br><code>`</code><br>记住一个就行了, 看你喜欢<br>欢迎下载试用 <a href="https://a.app.qq.com/o/simple.jsp?pkgname=cn.nfwx.tv" target="_blank" rel="noopener">南方无线电视</a></li>
+</ul>
 
             </div>
             <hr>
