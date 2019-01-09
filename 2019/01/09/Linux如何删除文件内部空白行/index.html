@@ -350,11 +350,16 @@ grep . filename &amp;gt; destfile
 sed &#39;/^\s*$/d&#39; data.txt   #这样由空格、tab组成的空行也会删掉。
 
 </code></pre><ol start="3">
-<li>VIM 删除<br><code>`</code><br>:g/^\s*$/d<br>g 代表全部匹配执行<br>^开头<br>\s空格 或者tab</li>
+<li>VIM 删除</li>
 </ol>
-<ul>
-<li>匹配0次或无限次<br>$ 结尾<br>d 删除<br><code>`</code><br>记住一个就行了, 看你喜欢<br>欢迎下载试用 <a href="https://a.app.qq.com/o/simple.jsp?pkgname=cn.nfwx.tv" target="_blank" rel="noopener">南方无线电视</a></li>
-</ul>
+<pre><code>:g/^\s*$/d
+g 代表全部匹配执行
+^开头
+\s空格 或者tab
+* 匹配0次或无限次
+$ 结尾
+d 删除
+</code></pre><p>记住一个就行了, 看你喜欢<br>欢迎下载试用 <a href="https://a.app.qq.com/o/simple.jsp?pkgname=cn.nfwx.tv" target="_blank" rel="noopener">南方无线电视</a></p>
 
             </div>
             <hr>
