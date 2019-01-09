@@ -5,8 +5,13 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Rainfly">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Linux如何删除文件内部空白行, Rainfly">
+    <meta name="description" content="介绍三个方法如何用命令行删除文件内部的空白行, 最简单实用
+
+Grep 查找法
+
+123grep . filename &amp;gt; destfile.是任意字符, &amp;gt; 是重定向, 意思是查找任意非空字符,重定向到destfile 文件
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +19,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | Rainfly</title>
+    <title>Linux如何删除文件内部空白行 | Rainfly</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -270,13 +275,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hello World
+                        Linux如何删除文件内部空白行
                     </div>
                 </div>
             </div>
@@ -296,8 +301,8 @@
             
             <div class="article-tag">
                 
-                <a href="/tags/Hexo/" target="_blank">
-                    <span class="chip bg-color">Hexo</span>
+                <a href="/tags/Linux-Shell-Vim/" target="_blank">
+                    <span class="chip bg-color">Linux Shell Vim</span>
                 </a>
                 
             </div>
@@ -328,15 +333,20 @@
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <p>介绍三个方法如何用命令行删除文件内部的空白行, 最简单实用</p>
+<ol>
+<li>Grep 查找法</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grep . filename &gt; destfile</span><br><span class="line"></span><br><span class="line">.是任意字符, &gt; 是重定向, 意思是查找任意非空字符,重定向到destfile 文件</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Sed 命令删除</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed  &apos;/^$/d&apos; data.txt</span><br><span class="line">sed &apos;/^\s*$/d&apos; data.txt   #这样由空格、tab组成的空行也会删掉。</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>VIM 删除<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:g/^\s*$/d</span><br><span class="line">g 代表全部匹配执行</span><br><span class="line">^开头</span><br><span class="line">\s空格 或者tab</span><br><span class="line">* 匹配0次或无限次</span><br><span class="line">$ 结尾</span><br><span class="line">d 删除</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>记住一个就行了, 看你喜欢<br>欢迎下载试用 <a href="https://a.app.qq.com/o/simple.jsp?pkgname=cn.nfwx.tv" target="_blank" rel="noopener">南方无线电视</a></p>
 
             </div>
             <hr>
@@ -475,7 +485,7 @@
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://rainfly234.github.io" class="b-link-green">Rainfly</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/01/09/hello-world/" class="b-link-green">Hello World</a>
+                    <a href="/2019/01/09/Linux如何删除文件内部空白行/" class="b-link-green">Linux如何删除文件内部空白行</a>
                 </p>
             </div>
         </div>
@@ -496,9 +506,9 @@
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://rainfly234.github.io/2019/01/09/hello-world/';
-        this.page.identifier = '/2019/01/09/hello-world/';
-        this.page.title = 'Hello World';
+        this.page.url = 'http://rainfly234.github.io/2019/01/09/Linux如何删除文件内部空白行/';
+        this.page.identifier = '/2019/01/09/Linux如何删除文件内部空白行/';
+        this.page.title = 'Linux如何删除文件内部空白行';
     };
     let disqus_shortname = '';
 
@@ -522,7 +532,7 @@
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2019/01/09/Linux如何删除文件内部空白行/">
                     <div class="card-image">
@@ -541,9 +551,9 @@ Grep 查找法
 123grep . filename &gt; destfile.是任意字符, &gt; 是重定向, 意思是查找任意非空字符,重定向到destfile 文件
 </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -556,6 +566,7 @@ Grep 查找法
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -572,28 +583,27 @@ Grep 查找法
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2019/01/08/test/">
+                <a href="/2019/01/09/hello-world/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="诗与远方,只可适当追寻">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
                         
-                        <span class="card-title">诗与远方,只可适当追寻</span>
+                        <span class="card-title">Hello World</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">welcome
-</div>
+                    <div class="summary">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-08
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/生活/" class="post-category" target="_blank">
-                                    生活
+                            <a href="/categories/技术/" class="post-category" target="_blank">
+                                    技术
                                 </a>
                             
                             
@@ -603,8 +613,8 @@ Grep 查找法
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/生活/" target="_blank">
-                        <span class="chip bg-color">生活</span>
+                    <a href="/tags/Hexo/" target="_blank">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
