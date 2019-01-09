@@ -7,11 +7,13 @@
     <meta charset="utf-8">
     <meta name="keywords" content="两步实现SSH免密登录远程服务器, Rainfly">
     <meta name="description" content="SSH免密登录远程服务器
-生成公钥注意更改Email地址`ssh-keygen -t rsa -b 4096 -C “example@gmail.com“
+生成公钥注意更改Email地址  
 
-2. 上传公钥到远程服务器  
+ssh-keygen -t rsa -b 4096 -C &amp;quot;example@gmail.com&amp;quot;
 
-ssh-copy-id -p 23 -i ~/.">
+上传公钥到远程服务器  
+
+ssh-copy-id -p">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -334,12 +336,14 @@ ssh-copy-id -p 23 -i ~/.">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="SSH免密登录远程服务器"><a href="#SSH免密登录远程服务器" class="headerlink" title="SSH免密登录远程服务器"></a>SSH免密登录远程服务器</h2><ol>
-<li>生成公钥<br>注意更改Email地址<br><code>`</code><br>ssh-keygen -t rsa -b 4096 -C “<a href="mailto:example@gmail.com" target="_blank" rel="noopener">example@gmail.com</a>“</li>
+<li>生成公钥<br>注意更改Email地址  </li>
 </ol>
-<pre><code>2. 上传公钥到远程服务器  
-
-</code></pre><p>ssh-copy-id -p 23 -i ~/.ssh/id_rsa.pub <a href="mailto:root@192.168.1.8" target="_blank" rel="noopener">root@192.168.1.8</a></p>
-<p><code>`</code><br>  -p 为远程服务器开启SSH服务的端口号<br>  <a href="mailto:root@192.168.1.8" target="_blank" rel="noopener">root@192.168.1.8</a> 是远程服务器网络地址和登录用户名</p>
+<pre><code>ssh-keygen -t rsa -b 4096 -C &quot;example@gmail.com&quot;
+</code></pre><ol start="2">
+<li>上传公钥到远程服务器  </li>
+</ol>
+<pre><code>ssh-copy-id -p 23 -i ~/.ssh/id_rsa.pub root@192.168.1.8
+</code></pre><p>  -p 为远程服务器开启SSH服务的端口号<br>  <a href="mailto:root@192.168.1.8" target="_blank" rel="noopener">root@192.168.1.8</a> 是远程服务器网络地址和登录用户名</p>
 <ol start="3">
 <li>可以享受免密登录了,注意用户名要和第二步的一致  </li>
 </ol>
@@ -541,11 +545,13 @@ ssh-copy-id -p 23 -i ~/.">
                 </a>
                 <div class="card-content article-content">
                     <div class="summary">SSH免密登录远程服务器
-生成公钥注意更改Email地址`ssh-keygen -t rsa -b 4096 -C “example@gmail.com“
+生成公钥注意更改Email地址  
 
-2. 上传公钥到远程服务器  
+ssh-keygen -t rsa -b 4096 -C &quot;example@gmail.com&quot;
 
-ssh-copy-id -p 23 -i ~/.</div>
+上传公钥到远程服务器  
+
+ssh-copy-id -p</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-09
