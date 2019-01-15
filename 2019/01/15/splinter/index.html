@@ -5,15 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="两步实现SSH免密登录远程服务器, Rainfly">
-    <meta name="description" content="SSH免密登录远程服务器
-生成公钥注意更改Email地址  
-
-ssh-keygen -t rsa -b 4096 -C &amp;quot;example@gmail.com&amp;quot;
-
-上传公钥到远程服务器  
-
-ssh-copy-id -p">
+    <meta name="keywords" content="splinter, Rainfly">
+    <meta name="description" content="SplinterSplinter is an abstraction layer on top of existing browser automation tools such as Selenium and zope.testbrows">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +14,7 @@ ssh-copy-id -p">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>两步实现SSH免密登录远程服务器 | Rainfly</title>
+    <title>splinter | Rainfly</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -283,7 +276,7 @@ ssh-copy-id -p">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        两步实现SSH免密登录远程服务器
+                        splinter
                     </div>
                 </div>
             </div>
@@ -303,8 +296,8 @@ ssh-copy-id -p">
             
             <div class="article-tag">
                 
-                <a href="/tags/SSH/" target="_blank">
-                    <span class="chip bg-color">SSH</span>
+                <a href="/tags/Python/" target="_blank">
+                    <span class="chip bg-color">Python</span>
                 </a>
                 
             </div>
@@ -323,7 +316,7 @@ ssh-copy-id -p">
                 
 
                 <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2019-01-09
+                    <i class="fa fa-clock-o fa-fw"></i>2019-01-15
                 </span>
 				
 				
@@ -335,18 +328,9 @@ ssh-copy-id -p">
         <hr>
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="SSH免密登录远程服务器"><a href="#SSH免密登录远程服务器" class="headerlink" title="SSH免密登录远程服务器"></a>SSH免密登录远程服务器</h2><ol>
-<li>生成公钥<br>注意更改Email地址  </li>
-</ol>
-<pre><code>ssh-keygen -t rsa -b 4096 -C &quot;example@gmail.com&quot;
-</code></pre><ol start="2">
-<li>上传公钥到远程服务器  </li>
-</ol>
-<pre><code>ssh-copy-id -p 23 -i ~/.ssh/id_rsa.pub root@192.168.1.8
-</code></pre><p>  -p 为远程服务器开启SSH服务的端口号<br>  <a href="mailto:root@192.168.1.8" target="_blank" rel="noopener">root@192.168.1.8</a> 是远程服务器网络地址和登录用户名</p>
-<ol start="3">
-<li>可以享受免密登录了,注意用户名要和第二步的一致  </li>
-</ol>
+                <h2 id="Splinter"><a href="#Splinter" class="headerlink" title="Splinter"></a>Splinter</h2><p>Splinter is an abstraction layer on top of existing browser automation tools such as Selenium and zope.testbrowser. It has a high-level API that makes it easy to write automated tests of web applications.</p>
+<p>交互式web应用测试工具,可以完全模拟人工点击\输入等操作</p>
+<p>WebSite: <a href="https://splinter.readthedocs.io/en/latest/tutorial.html" target="_blank" rel="noopener">splinter</a></p>
 
             </div>
             <hr>
@@ -485,7 +469,7 @@ ssh-copy-id -p">
                     <span class="reprint-tip">转载请注明: </span>
                     <a href="http://rainfly234.github.io" class="b-link-green">Rainfly</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/01/09/sshfree/" class="b-link-green">两步实现SSH免密登录远程服务器</a>
+                    <a href="/2019/01/15/splinter/" class="b-link-green">splinter</a>
                 </p>
             </div>
         </div>
@@ -506,9 +490,9 @@ ssh-copy-id -p">
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'http://rainfly234.github.io/2019/01/09/sshfree/';
-        this.page.identifier = '/2019/01/09/sshfree/';
-        this.page.title = '两步实现SSH免密登录远程服务器';
+        this.page.url = 'http://rainfly234.github.io/2019/01/15/splinter/';
+        this.page.identifier = '/2019/01/15/splinter/';
+        this.page.title = 'splinter';
     };
     let disqus_shortname = '';
 
@@ -532,7 +516,7 @@ ssh-copy-id -p">
     <div class="row article-row">
         
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
+            <div class="article-badge left-badge text-color">本篇</div>
             <div class="card">
                 <a href="/2019/01/15/splinter/">
                     <div class="card-image">
@@ -546,9 +530,9 @@ ssh-copy-id -p">
                 <div class="card-content article-content">
                     <div class="summary">SplinterSplinter is an abstraction layer on top of existing browser automation tools such as Selenium and zope.testbrows</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -561,6 +545,7 @@ ssh-copy-id -p">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -577,18 +562,24 @@ ssh-copy-id -p">
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">下一篇</div>
             <div class="card">
-                <a href="/2019/01/09/RTMPublisher/">
+                <a href="/2019/01/09/sshfree/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="RTMPublisher">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="两步实现SSH免密登录远程服务器">
                         
-                        <span class="card-title">RTMPublisher</span>
+                        <span class="card-title">两步实现SSH免密登录远程服务器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">介绍一款RTMP 推流工具运行环境支持Linux\Windows, 支持录屏\录制摄像头内容RTMP 推送到远端服务器那就是: OBS(Open Broadcast Software)
-</div>
+                    <div class="summary">SSH免密登录远程服务器
+生成公钥注意更改Email地址  
+
+ssh-keygen -t rsa -b 4096 -C &quot;example@gmail.com&quot;
+
+上传公钥到远程服务器  
+
+ssh-copy-id -p</div>
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-09
@@ -608,8 +599,8 @@ ssh-copy-id -p">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/RTMP-H264/" target="_blank">
-                        <span class="chip bg-color">RTMP H264</span>
+                    <a href="/tags/SSH/" target="_blank">
+                        <span class="chip bg-color">SSH</span>
                     </a>
                     
                 </div>

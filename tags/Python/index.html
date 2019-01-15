@@ -5,15 +5,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="两步实现SSH免密登录远程服务器, Rainfly">
-    <meta name="description" content="SSH免密登录远程服务器
-生成公钥注意更改Email地址  
-
-ssh-keygen -t rsa -b 4096 -C &amp;quot;example@gmail.com&amp;quot;
-
-上传公钥到远程服务器  
-
-ssh-copy-id -p">
+    <meta name="keywords" content="标签: Python, Rainfly">
+    <meta name="description" content="标签: Python | Rainfly">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +14,7 @@ ssh-copy-id -p">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>两步实现SSH免密登录远程服务器 | Rainfly</title>
+    <title>标签: Python | Rainfly</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -273,357 +266,138 @@ ssh-copy-id -p">
     </nav>
 </header>
 
-
-
-
-
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover  about-cover" style="background-image: url('/medias/cover.jpg')">
     <div class="container">
         <div class="row">
-            <div class="col s12 m12 l12">
+            <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
                 <div class="brand">
-                    <div class="description center-align post-title">
-                        两步实现SSH免密登录远程服务器
+                    <div class="title center-align">
+                    
+                        积德行善
+                    
+                    </div>
+
+                    <div class="description center-align">
+                    
+                        善恶到头终有报,人间正道是沧桑
+                    
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-
-
-<main class="container content">
-
-    
-    <!-- 文章内容详情 -->
-<div id="artDetail">
-    <div class="card">
-        <div class="card-content article-info">
-            
-            <div class="article-tag">
-                
-                <a href="/tags/SSH/" target="_blank">
-                    <span class="chip bg-color">SSH</span>
-                </a>
-                
-            </div>
-            
-            <div class="post-info">
-                
-                <span class="post-cate">
-                <!--<span class="post-cate" style="margin-right: 0px">-->
-                    <i class="fa fa-bookmark fa-fw icon-category"></i>
-                    
-                    <a href="/categories/技术/" class="post-category" target="_blank">
-                        技术
-                    </a>
-                    
-                </span>
-                
-
-                <span class="post-date">
-                    <i class="fa fa-clock-o fa-fw"></i>2019-01-09
-                </span>
-				
-				
-                    <span id="busuanzi_container_page_pv" class="post-read">
-                    <i class="fa fa-eye fa-fw"></i>阅读 <span id="busuanzi_value_page_pv"></span>
-				
-            </span></div>
-        </div>
-        <hr>
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h2 id="SSH免密登录远程服务器"><a href="#SSH免密登录远程服务器" class="headerlink" title="SSH免密登录远程服务器"></a>SSH免密登录远程服务器</h2><ol>
-<li>生成公钥<br>注意更改Email地址  </li>
-</ol>
-<pre><code>ssh-keygen -t rsa -b 4096 -C &quot;example@gmail.com&quot;
-</code></pre><ol start="2">
-<li>上传公钥到远程服务器  </li>
-</ol>
-<pre><code>ssh-copy-id -p 23 -i ~/.ssh/id_rsa.pub root@192.168.1.8
-</code></pre><p>  -p 为远程服务器开启SSH服务的端口号<br>  <a href="mailto:root@192.168.1.8" target="_blank" rel="noopener">root@192.168.1.8</a> 是远程服务器网络地址和登录用户名</p>
-<ol start="3">
-<li>可以享受免密登录了,注意用户名要和第二步的一致  </li>
-</ol>
-
-            </div>
-            <hr>
-
-            
-            <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.88rem;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff;
-        background-color: #22AB38;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff;
-        background-color: #019FE8;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a class="reward-link btn-floating btn-large waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close"><i class="fa fa-close"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs">
-                        <li class="tab wechat-tab waves-effect waves-light"><a class="active" href="#wechat">微信</a></li>
-                        <li class="tab alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                    </ul>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
 </div>
 
 <script>
-    $(function () {
-        $('#reward .reward-link').on('click', function () {
-            $('#rewardModal').openModal();
-        });
-
-        $('#rewardModal .close').on('click', function () {
-            $('#rewardModal').closeModal();
-        });
-    });
+// Dynamically switch banner pictures every day.
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>
-            
 
-            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-
-<div id="article-share">
-    
-    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
-    
-</div>
-
-<script src="/libs/share/js/social-share.min.js"></script>
-
-            <div class="reprint">
-                <p>
-                    <span class="reprint-tip">转载请注明: </span>
-                    <a href="http://rainfly234.github.io" class="b-link-green">Rainfly</a>
-                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/01/09/sshfree/" class="b-link-green">两步实现SSH免密登录远程服务器</a>
-                </p>
-            </div>
-        </div>
-    </div>
+<main class="content">
 
     
 
-    
-
-    
-        <div class="disqus-card card" data-aos="fade-up">
-    <div id="disqus_thread" class="card-content">
-        <noscript>Please enable JavaScript to view the
-            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-    </div>
-</div>
-
-<script type="text/javascript">
-    disqus_config = function () {
-        this.page.url = 'http://rainfly234.github.io/2019/01/09/sshfree/';
-        this.page.identifier = '/2019/01/09/sshfree/';
-        this.page.title = '两步实现SSH免密登录远程服务器';
-    };
-    let disqus_shortname = '';
-
-    (function () { // DON'T EDIT BELOW THIS LINE
-        let d = document, s = d.createElement('script');
-        // 如：s.src = 'https://blinkfox.disqus.com/embed.js';
-        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">上一篇</div>
-            <div class="card">
-                <a href="/2019/01/15/splinter/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="splinter">
-                        
-                        <span class="card-title">splinter</span>
-                    </div>
+<div id="tags" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">文章标签</div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/Python/" title="Python: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active " data-tagname="Python" style="background-color: #F9EBEA;">Python
+                        <span class="tag-length">1</span>
+                    </span>
                 </a>
-                <div class="card-content article-content">
-                    <div class="summary">SplinterSplinter is an abstraction layer on top of existing browser automation tools such as Selenium and zope.testbrows</div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-15
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/技术/" class="post-category" target="_blank">
-                                    技术
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/" target="_blank">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                </div>
                 
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">下一篇</div>
-            <div class="card">
-                <a href="/2019/01/09/RTMPublisher/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="RTMPublisher">
-                        
-                        <span class="card-title">RTMPublisher</span>
-                    </div>
+                <a href="/tags/Linux-Shell-Vim/" title="Linux Shell Vim: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="Linux Shell Vim" style="background-color: #F5EEF8;">Linux Shell Vim
+                        <span class="tag-length">1</span>
+                    </span>
                 </a>
-                <div class="card-content article-content">
-                    <div class="summary">介绍一款RTMP 推流工具运行环境支持Linux\Windows, 支持录屏\录制摄像头内容RTMP 推送到远端服务器那就是: OBS(Open Broadcast Software)
-</div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-09
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/技术/" class="post-category" target="_blank">
-                                    技术
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/RTMP-H264/" target="_blank">
-                        <span class="chip bg-color">RTMP H264</span>
-                    </a>
-                    
-                </div>
+                
+                <a href="/tags/Hexo/" title="Hexo: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="Hexo" style="background-color: #D5F5E3;">Hexo
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/RTMP-H264/" title="RTMP H264: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="RTMP H264" style="background-color: #E8F8F5;">RTMP H264
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/官房/" title="官房: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="官房" style="background-color: #FEF9E7;">官房
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/SSH/" title="SSH: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " data-tagname="SSH" style="background-color: #F8F9F9;">SSH
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
                 
             </div>
         </div>
-        
     </div>
-</article>
 </div>
 
+    <div class="container">
+        
 
-    
-
+        <article>
+            <div class="row tags-posts">
+                
+                
+                <div class="article tag-post col s12 m6 l4" data-tags="Python" data-aos="fade-up">
+                    <div class="card">
+                        <a href="/2019/01/15/splinter/">
+                            <div class="card-image tag-image">
+                                
+                                
+                                <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="splinter">
+                                
+                                <span class="card-title">splinter</span>
+                            </div>
+                        </a>
+                        <div class="card-content article-content">
+                            <div class="publish-info">
+                                <span class="publish-date">
+                                    <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-15
+                                </span>
+                                <span class="publish-author">
+                                    
+                                    <i class="fa fa-bookmark fa-fw icon-category"></i>
+                                    
+                                    <a href="/categories/技术/" class="post-category" target="_blank">
+                                    技术
+                                    </a>
+                                    
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </article>
+    </div>
 </main>
 
 
